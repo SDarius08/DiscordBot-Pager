@@ -1,0 +1,33 @@
+{
+  "type": "module",
+  "name": "pager_ror",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon main/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SDarius08/pager_ROR.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SDarius08/pager_ROR/issues"
+  },
+  "homepage": "https://github.com/SDarius08/pager_ROR#readme",
+  "dependencies": {
+    "@discordjs/builders": "^1.4.0",
+    "@discordjs/voice": "^0.14.0",
+    "@types/node": "^18.11.18",
+    "bufferutil": "^4.0.7",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "i": "^0.3.7",
+    "mongoose": "^6.8.4",
+    "utf-8-validate": "^6.0.0"
+  }
+}
