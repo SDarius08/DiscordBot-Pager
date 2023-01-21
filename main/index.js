@@ -48,9 +48,18 @@ client.on("interactionCreate", (interaction) => {
 } else if (interaction.commandName === "pager") {
     const team = interaction.options.get("team").value
     const incident = interaction.options.get("incident").value
+    const time = interaction.options.get("time").value
+    var i = 0;
+    const user = interaction.user
         interaction.reply({
           content:
-            `*You dispatched:* **${team} for ${incident}**`,
+            `**PAGER — PAGER — PAGER**
+**NO:** ${i++}
+**FROM:**  <@${user.id}>
+**TO:** ${team}
+**INCIDENT:** ${incident}
+**TIME:** ${time}
+**PAGER — PAGER — PAGER**`,
         })};
   };
 });

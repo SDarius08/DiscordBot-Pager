@@ -11,7 +11,7 @@ const pagerCommand = new SlashCommandBuilder()
       .setChoices(
         {
           name: "swt",
-          value: "swt",
+          value: "<@&1066052391012667543>",
         },
         {
           name: "sed",
@@ -33,9 +33,15 @@ const pagerCommand = new SlashCommandBuilder()
   )
   .addIntegerOption((option) =>
     option
-      .setName("incident")
+      .setName("time")
       .setDescription("Hour of the incident")
       .setRequired(true)
-  );
+  )
+  .addStringOption((option) =>
+  option
+    .setName("incident")
+    .setDescription("Description of the incident")
+    .setRequired(true)
+);
 
 export default pagerCommand.toJSON();
