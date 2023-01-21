@@ -11,27 +11,27 @@ const pagerCommand = new SlashCommandBuilder()
       .setChoices(
         {
           name: "swt",
-          value: "<@&1066052391012667543>",
+          value: "<@&1066025445692284999>",
         },
         {
           name: "sed",
-          value: "sed",
+          value: "<@&1066025577158557736>",
         },
         {
           name: "ard",
-          value: "ard",
+          value: "<@&1066025709409144893>",
         },
         {
           name: "harzmat",
-          value: "mazmat",
+          value: "<@&1066025755705888829>",
         },
         {
           name: "joint",
-          value: "joint",
+          value: "<@&1066025445692284999> <@&1066025577158557736> <@&1066025709409144893> <@&1066025755705888829>",
         },
       )
   )
-  .addIntegerOption((option) =>
+  .addStringOption((option) =>
     option
       .setName("time")
       .setDescription("Hour of the incident")

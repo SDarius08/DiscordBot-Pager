@@ -2,6 +2,7 @@ import { config } from "dotenv";
 config();
 import orderCommand from "./commands/order.js";
 import pagerCommand from "./commands/pager.js";
+import buttonCommand from "./commands/button.js";
 import {
   ActionRowBuilder,
   Client,
@@ -30,6 +31,7 @@ const rest = new REST({
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
+  allowedMentions: { parse: ['users', 'roles'], repliedUser: true },
 });
 
 client.on("ready", () => {
@@ -60,12 +62,16 @@ client.on("interactionCreate", (interaction) => {
 **INCIDENT:** ${incident}
 **TIME:** ${time}
 **PAGER — PAGER — PAGER**`,
-        })};
+        });
+      
+      } else if (interaction.commandName === "button") {
+
+      }
   };
 });
 
 async function main() {
-  const commands = [orderCommand,pagerCommand];
+  const commands = [orderCommand,pagerCommand,buttonCommand];
   try {
     console.log("Started refreshing application (/) commands.");
     await rest.put(Routes.applicationCommands(CLIENT_ID, GUILD_ID), {
