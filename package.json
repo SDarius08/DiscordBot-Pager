@@ -23,6 +23,8 @@
     "@discordjs/builders": "^1.4.0",
     "@discordjs/voice": "^0.14.0",
     "@types/node": "^18.11.18",
+    "ascii": "^1.0.0",
+    "ascii-table": "^0.0.9",
     "bufferutil": "^4.0.7",
     "discord.js": "^14.7.1",
     "dotenv": "^16.0.3",
